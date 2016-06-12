@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jsm.my.manager.fx.controller.TelefoneUtilListaController">
+   <left>
+      <VBox prefHeight="473.0" prefWidth="230.0" styleClass="pane-blue" stylesheets="@../css/estilos.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Pesquisa" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCampoPesquisa" />
+         </children>
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding>
+      </VBox>
+   </left>
+   <top>
+      <HBox prefWidth="200.0" styleClass="pane-blue" stylesheets="@../css/estilos.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btNovo" mnemonicParsing="false" text="Novo">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" layoutX="120.0" layoutY="98.0" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+              <columns>
+                <TableColumn fx:id="clDescricao" prefWidth="340.0" text="DESCRIÇÃO" />
+                <TableColumn fx:id="clKeyword" prefWidth="145.0" text="KEYWORD" />
+                  <TableColumn fx:id="clDDD" prefWidth="60.0" text="DD" />
+                  <TableColumn fx:id="clTelefone" prefWidth="66.0" text="TELEFONE" />
+                  <TableColumn fx:id="clObjectId" prefWidth="146.0" text="OBJECT ID" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -12,7 +12,12 @@ import java.util.UUID;
  *
  * @author moises
  */
-public class HistoricoProblema implements Serializable{
+public class HistoricoProblema extends BasicEntity implements Serializable{
+    //ARRAY DE CAMPOS DA TABELA
+    public static final String CAMPOS[]={COLUMN_DATA_CADASTRO,COLUMN_DATA_ATUALIZACAO};
     private UUID objectId;
-    //private String 
+    private String titulo;
+    private String descricaoProblema;
+    private String descricaoSolucao;
+    private String keyword;
 }

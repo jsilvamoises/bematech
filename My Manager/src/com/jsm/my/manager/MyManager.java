@@ -5,14 +5,17 @@
  */
 package com.jsm.my.manager;
 
+import com.jsm.my.manager.util.SystemProperties;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Dialog;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import com.jsm.my.manager.util.SystemLoad;
 /**
  *
  * @author moises
@@ -24,10 +27,13 @@ public class MyManager extends Application {
         Button btn = new Button();
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
-            
+        Dialog dialog;    
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Hello World!");
+                 System.out.println("fff"+SystemLoad.getInstance().getValuePropertie(SystemProperties.FILE_DB));
+               
+                
             }
         });
         

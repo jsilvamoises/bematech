@@ -12,10 +12,13 @@ import java.util.UUID;
  *
  * @author moises
  */
-public class ScriptCMD implements Serializable{
+public class ScriptCMD extends BasicEntity implements Serializable{
+    //ARRAY DE CAMPOS DA TABELA
+    public static final String CAMPOS[]={COLUMN_DATA_CADASTRO,COLUMN_DATA_ATUALIZACAO};
     private UUID objectId;
     private String descricao;
     private String comando;
+    private String keyword;
 
     public ScriptCMD() {
         this.objectId = UUID.randomUUID();
@@ -45,6 +48,14 @@ public class ScriptCMD implements Serializable{
 
     public void setComando(String comando) {
         this.comando = comando;
+    }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
     }
     
     

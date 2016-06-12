@@ -12,10 +12,13 @@ import java.util.UUID;
  *
  * @author moises
  */
-public class Informacoes implements Serializable{
+public class Informacoes extends BasicEntity implements Serializable{
+    //ARRAY DE CAMPOS DA TABELA
+    public static final String CAMPOS[]={COLUMN_DATA_CADASTRO,COLUMN_DATA_ATUALIZACAO};
     private UUID objectId;
     private String title;
     private String informacao;
+    private String keyword;
 
     public Informacoes() {
         this.objectId =UUID.randomUUID();
@@ -43,6 +46,14 @@ public class Informacoes implements Serializable{
 
     public void setInformacao(String informacao) {
         this.informacao = informacao;
+    }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
     }
     
     

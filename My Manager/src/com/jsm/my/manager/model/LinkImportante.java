@@ -12,12 +12,15 @@ import java.util.UUID;
  *
  * @author moises
  */
-public class LinksImportante implements Serializable{
+public class LinkImportante extends BasicEntity implements Serializable{
+    //ARRAY DE CAMPOS DA TABELA
+    public static final String CAMPOS[]={COLUMN_DATA_CADASTRO,COLUMN_DATA_ATUALIZACAO};
     private UUID objectId;
     private String link;
     private String descricao;
+    private String keyword;
 
-    public LinksImportante() {
+    public LinkImportante() {
         this.objectId = UUID.randomUUID();
     }
 
@@ -43,6 +46,14 @@ public class LinksImportante implements Serializable{
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
     }
     
     

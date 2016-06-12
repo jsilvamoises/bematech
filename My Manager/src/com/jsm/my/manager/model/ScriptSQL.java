@@ -5,6 +5,7 @@
  */
 package com.jsm.my.manager.model;
 
+
 import java.io.Serializable;
 import java.util.UUID;
 
@@ -12,11 +13,14 @@ import java.util.UUID;
  *
  * @author moises
  */
-public class ScriptSQL implements Serializable {
+public class ScriptSQL extends BasicEntity implements Serializable {
+    //ARRAY DE CAMPOS DA TABELA
+    public static final String CAMPOS[]={COLUMN_DATA_CADASTRO,COLUMN_DATA_ATUALIZACAO};
 
     private UUID objectId;
     private String descricao;
     private String comando;
+    private String keyword;
 
     public ScriptSQL() {
         this.objectId = UUID.randomUUID();
@@ -45,6 +49,15 @@ public class ScriptSQL implements Serializable {
     public void setComando(String comando) {
         this.comando = comando;
     }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
+    }
+    
     
     
 }
