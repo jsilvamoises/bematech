@@ -1,0 +1,35 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.btn-save{    
+    -fx-background-color: aqua;
+    -fx-background-radius: 5px;
+}
+.btn-save:hover{    
+    -fx-background-color: bisque;
+    -fx-background-radius: 5px;
+}
+.btn-save:focused{
+    -fx-background-color: brown;
+    -fx-background-radius: 5px;
+    
+}
+.tf-ddd{
+   -fx-maxlength:2;
+}
+.pane-blue{
+    -fx-background-color:#4285f4;
+}
+.fundo-tranparente{
+    -fx-background-color:#00000000;
+}
+#status-bar{
+    -fx-background-color:#4285f4;
+}
+label{
+    -fx-text-fill: #4285f4;
+}
